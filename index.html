@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B1+ Vocabulary Building Hub - Set 1</title>
+<style>
+:root{
+  --ink:#1C1B22; --slate:#3A3848; --violet:#7C4DEC; --violet-d:#6438D0;
+  --paper:#F6F5FA; --white:#fff; --line:#E3E0EE; --muted:#625E73;
+  --green:#2E7D57; --amber:#D99A2B; --red:#B3342E;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font-family:"Segoe UI",Roboto,system-ui,-apple-system,Arial,sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 70px}
+
+/* ---------- header ---------- */
+.bar{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff;border-bottom:4px solid var(--violet)}
+.bar-in{max-width:1080px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:18px;letter-spacing:.2px}
+.logo span{color:#C7B0FF}
+.bar-nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.bar-nav button{font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border:none;border-radius:999px;
+  padding:6px 14px;background:rgba(255,255,255,.12);color:#fff}
+.bar-nav button:hover{background:rgba(255,255,255,.22)}
+.bar-nav button.on{background:var(--violet);}
+
+h1{font-family:Georgia,"Times New Roman",serif;font-size:2.3rem;line-height:1.15;margin:.5em 0 .15em}
+h2{font-family:Georgia,serif;font-size:1.5rem;margin:1.5em 0 .5em}
+h3{font-size:1.08rem;margin:1.1em 0 .4em}
+.lead{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.kicker{color:var(--violet);font-weight:700;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0}
+.btn{font:inherit;font-weight:700;cursor:pointer;border:none;border-radius:10px;padding:11px 18px;
+  background:var(--violet);color:#fff;text-decoration:none;display:inline-block;transition:.18s}
+.btn:hover{background:var(--violet-d)}
+.btn.alt{background:#fff;color:var(--slate);border:2px solid var(--line)}
+.btn.alt:hover{border-color:var(--violet);color:var(--violet)}
+.btn.sm{padding:8px 14px;font-size:14.5px;border-radius:9px}
+.btn.ghost{background:transparent;color:var(--muted);border:2px dashed var(--line)}
+:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.hide{display:none !important}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.note{background:#F0ECFC;border-left:5px solid var(--violet);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+.warn{background:#FFF6E4;border-left:5px solid var(--amber);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+
+/* ---------- progress ---------- */
+.hero{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding:26px 0 6px}
+.hero-txt{flex:1 1 380px}
+.ring{flex:0 0 150px;width:150px;height:150px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .num b{font-family:Georgia,serif;font-size:2.1rem;line-height:1}
+.ring .num small{color:var(--muted);font-size:12.5px;letter-spacing:.5px;text-transform:uppercase}
+
+/* ---------- list cards ---------- */
+.lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;margin-top:8px}
+.lc{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.lc:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,27,34,.09)}
+.lc-top{padding:16px 18px;color:#fff;position:relative}
+.lc-top .n{font-family:Georgia,serif;font-size:2.6rem;line-height:1;opacity:.35;position:absolute;right:16px;top:8px}
+.lc-top .lbl{font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;opacity:.85;font-weight:700}
+.lc-top h3{font-family:Georgia,serif;font-size:1.45rem;margin:2px 0 0;color:#fff}
+.lc-body{padding:16px 18px;flex:1 1 auto}
+.lc-meta{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+.act{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.act .nm{flex:1 1 auto;font-size:15.5px}
+.act .nm small{display:block;color:var(--muted);font-size:13px}
+.tick{flex:0 0 26px;width:26px;height:26px;border-radius:50%;border:2px solid var(--line);background:#fff;
+  cursor:pointer;font-size:14px;line-height:22px;text-align:center;color:transparent;padding:0}
+.tick.done{background:var(--green);border-color:var(--green);color:#fff}
+.tick:hover{border-color:var(--violet)}
+.tickbox{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font-size:14px;font-weight:600;color:var(--muted);user-select:none}
+.tickbox input{width:19px;height:19px;accent-color:var(--violet);cursor:pointer;margin:0}
+.tickbox.on{color:var(--green)}
+.tickbox.big{font-size:14.5px;color:var(--slate)}
+.lc-foot{padding:12px 18px;background:#FAF9FD;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 11px;background:#EEEBF8;color:var(--slate)}
+.pill.done{background:#E3F2EA;color:var(--green)}
+.pill.next{background:#F0ECFC;color:var(--violet)}
+
+/* ---------- badges ---------- */
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:12px}
+.bg{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center}
+.bg .ic{font-size:2.1rem;filter:grayscale(1);opacity:.28}
+.bg.on .ic{filter:none;opacity:1}
+.bg .t{font-size:13.5px;font-weight:700;margin-top:4px}
+.bg .d{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.35}
+.bg.on{border-color:var(--violet);box-shadow:0 0 0 3px #F0ECFC}
+
+/* ---------- word index ---------- */
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+input[type=text],input[type=search]{font:inherit;padding:11px 14px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input[type=search]{min-width:230px;flex:1 1 230px}
+input:focus{border-color:var(--violet);outline:none}
+.chip{font:inherit;font-size:14px;font-weight:600;cursor:pointer;border:2px solid var(--line);background:#fff;
+  color:var(--muted);border-radius:999px;padding:7px 14px}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+table.words{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.words th,table.words td{border-bottom:1px solid var(--line);padding:9px 11px;text-align:left}
+table.words th{background:var(--ink);color:#fff;position:sticky;top:58px}
+table.words td.w{font-weight:700;font-size:15.5px}
+table.words .pos{display:block;font-weight:400;font-size:12.5px;color:var(--muted);font-style:italic}
+table.words td.mean{font-size:14.5px;line-height:1.45}
+table.words td.ar{font-family:"Segoe UI",Tahoma,Arial,sans-serif;direction:rtl;text-align:right;font-size:15.5px}
+table.words mark{background:#FFE9A8;border-radius:3px;padding:0 2px}
+@media (max-width:700px){
+  table.words th:first-child,table.words td:first-child{display:none}
+  table.words th,table.words td{padding:8px 7px}
+  table.words td.ar{font-size:14.5px}
+}
+
+table.words td.w{font-weight:600}
+.lchip{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px;color:#fff;white-space:nowrap}
+.empty{color:var(--muted);padding:18px;text-align:center}
+
+/* ---------- certificate ---------- */
+.cert{background:#fff;border:3px double var(--violet);border-radius:10px;padding:38px 28px;text-align:center;margin:18px 0}
+.cert h2{font-family:Georgia,serif;font-size:2rem;margin:.2em 0;color:var(--violet)}
+.cert .nm{font-family:Georgia,serif;font-size:2.1rem;border-bottom:2px solid var(--violet);display:inline-block;padding:0 26px 4px;margin:12px 0}
+.cert table{margin:16px auto;border-collapse:collapse;font-size:14.5px}
+.cert td{padding:5px 14px;border-bottom:1px solid var(--line)}
+.foot{text-align:center;color:var(--muted);font-size:14px;padding:26px 0 10px;border-top:1px solid var(--line);margin-top:34px}
+
+@media (max-width:620px){
+  body{font-size:16px} h1{font-size:1.75rem}
+  .ring{flex:0 0 120px;width:120px;height:120px}
+  table.words th{position:static}
+}
+@media print{.bar,.btn,.tools,.noprint{display:none!important} body{background:#fff} .card{border:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="logo">B1+ Vocabulary Building Hub <span>-</span> Set 1</div>
+    <div class="bar-nav">
+      <button id="nav-home" class="on" onclick="go('home')">Lists</button>
+      <button id="nav-badges" onclick="go('badges')">Badges</button>
+      <button id="nav-words" onclick="go('words')">All 240 words</button>
+      <button id="nav-progress" onclick="go('progress')">My progress</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ================= HOME ================= -->
+<section id="vHome">
+  <div class="hero">
+    <div class="hero-txt">
+      <div class="kicker">General Studies, English Communications - Vocabulary Building HUB</div>
+      <h1>B1+ Vocabulary Practice (six lists)</h1>
+      <p class="lead">Each list has 40 words, a 50-question vocabulary quiz and an IELTS-style reading test
+      built from the same words. Finish both activities in a list to earn its badge, then move on to the next.
+      Finish all six and you get the course certificate.</p>
+    </div>
+    <div class="ring">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="64" fill="none" stroke="#E3E0EE" stroke-width="13"/>
+        <circle id="ringArc" cx="75" cy="75" r="64" fill="none" stroke="#7C4DEC" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="402"/>
+      </svg>
+      <div class="num"><b id="ringNum">0</b><small>of 12 done</small></div>
+    </div>
+  </div>
+
+  <div class="row" style="margin:10px 0 18px">
+    <button class="btn" onclick="go('progress')">Record a result</button>
+    <button class="btn alt" onclick="go('words')">Study all 240 words</button>
+    <span style="color:var(--muted);font-size:14.5px" id="upNext"></span>
+  </div>
+  <div style="display:none">
+  </div>
+
+  <div class="lists" id="listGrid"></div>
+
+  <div id="certHolder"></div>
+</section>
+
+<!-- ================= BADGES ================= -->
+<section id="vBadges" class="hide">
+  <button class="btn alt sm noprint" onclick="go('home')" style="margin:18px 0 0">← Back to the lists</button>
+  <h1>Badges</h1>
+  <p class="lead">One badge for each list you finish, plus four for the milestones. Tap a list card on the
+  Lists page, or record your results, to light them up.</p>
+  <div class="card"><div class="badges" id="badgeGrid"></div></div>
+</section>
+
+<!-- ================= WORDS ================= -->
+<section id="vWords" class="hide">
+  <button class="btn alt sm noprint" onclick="go('home')" style="margin:18px 0 0">← Back to the lists</button>
+  <h1>All 240 words</h1>
+  <p class="lead">Every word on the six B1+ lists, in one searchable table. Type any word to find which
+  list it belongs to, or filter by list and print it as a study sheet.</p>
+  <div class="tools noprint">
+    <input type="search" id="wSearch" placeholder="Search a word or a meaning…" oninput="renderWords()" autocomplete="off">
+    <button class="chip on" data-l="0" onclick="filterList(0,this)">All</button>
+    <button class="chip" data-l="1" onclick="filterList(1,this)">1</button>
+    <button class="chip" data-l="2" onclick="filterList(2,this)">2</button>
+    <button class="chip" data-l="3" onclick="filterList(3,this)">3</button>
+    <button class="chip" data-l="4" onclick="filterList(4,this)">4</button>
+    <button class="chip" data-l="5" onclick="filterList(5,this)">5</button>
+    <button class="chip" data-l="6" onclick="filterList(6,this)">6</button>
+    <button class="btn alt sm" onclick="window.print()">Print</button>
+  </div>
+  <div id="wCount" style="color:var(--muted);font-size:14.5px;margin-bottom:8px"></div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="words"><thead><tr><th style="width:44px">#</th><th style="width:22%">Word</th><th>Meaning</th><th style="width:20%">Arabic</th><th style="width:96px">List</th></tr></thead>
+    <tbody id="wBody"></tbody></table>
+    <div id="wEmpty" class="empty hide">No word matches that search.</div>
+  </div>
+</section>
+
+<!-- ================= PROGRESS ================= -->
+<section id="vProgress" class="hide">
+  <button class="btn alt sm noprint" onclick="go('home')" style="margin:18px 0 0">← Back to the lists</button>
+  <h1>My progress</h1>
+  <p class="lead">Every quiz and reading test lets you download a result file when you finish. Drop those
+  files here and this page fills in automatically — including your scores.</p>
+
+  <div class="card">
+    <h3 style="margin-top:0">Your name</h3>
+    <div class="row">
+      <input type="text" id="whoName" placeholder="e.g. Mariam Al Hosani" oninput="setName(this.value)" style="flex:1 1 260px">
+      <span style="color:var(--muted);font-size:14.5px">This goes on the course certificate.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">Record a result</h3>
+    <div id="dropZone" style="border:2px dashed var(--line);border-radius:14px;padding:26px;text-align:center;background:#FAF9FD">
+      <div style="font-size:2rem">📄</div>
+      <p style="margin:6px 0 14px;color:var(--muted)">Drag your result files here, or choose them below.<br>
+      You can add several at once.</p>
+      <button class="btn" onclick="document.getElementById('resFile').click()">Choose result files</button>
+      <input type="file" id="resFile" accept=".json" multiple class="hide" onchange="readResults(event)">
+    </div>
+    <div id="importLog"></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">What you have done</h3>
+    <table class="words" id="progTable"></table>
+    <div class="row" style="margin-top:16px">
+      <button class="btn alt sm" onclick="saveProgress()">Download my progress file</button>
+      <button class="btn alt sm" onclick="document.getElementById('progFile').click()">Load a progress file</button>
+      <input type="file" id="progFile" accept=".json" class="hide" onchange="loadProgress(event)">
+      <button class="btn ghost sm" onclick="resetProgress()">Clear everything</button>
+    </div>
+    <p id="memNote" style="color:var(--muted);font-size:14px;margin-bottom:0"></p>
+  </div>
+</section>
+
+<div class="foot">
+  Designed by: Nazila Motahari &nbsp;|&nbsp; Higher Colleges of Technology, Abu Dhabi &nbsp;|&nbsp;
+  General Studies, English Communications &nbsp;|&nbsp; B1+ Vocabulary Practice
+</div>
+</div>
+
+<script>
+/* ============================================================
+   THE SIX LISTS
+   file names must match the app files sitting in the same folder
+   ============================================================ */
+const LISTS=[
+ {
+  "n": 1,
+  "theme": "Education",
+  "colour": "#A8742A",
+  "dark": "#6B4A33",
+  "quiz": "https://nana390-tech.github.io/IELTS-Series-Vocab-List-1-Education-QUIZ/",
+  "read": "https://nana390-tech.github.io/Vocab-List-1--Reading-EDUCATION/",
+  "reading": "The Science of Revision",
+  "words": [
+   {
+    "w": "absolutely",
+    "p": "adverb",
+    "d": "Completely, or used to agree strongly",
+    "ar": "تَماماً / بالتَأكيد"
+   },
+   {
+    "w": "ambition",
+    "p": "noun",
+    "d": "Something you want to achieve in your life",
+    "ar": "طُموح"
+   },
+   {
+    "w": "application",
+    "p": "noun",
+    "d": "A formal request for a job or a place on a course",
+    "ar": "طَلَب / اِستِمارة"
+   },
+   {
+    "w": "attempt",
+    "p": "noun / verb",
+    "d": "An act of trying to do something; to try to do it",
+    "ar": "مُحاوَلة / يُحاوِل"
+   },
+   {
+    "w": "attitude",
+    "p": "noun",
+    "d": "The way you think or feel about something",
+    "ar": "مَوقِف / نَظرة"
+   },
+   {
+    "w": "bell",
+    "p": "noun",
+    "d": "An object that makes a ringing sound, used to start or end a lesson",
+    "ar": "جَرَس"
+   },
+   {
+    "w": "ceremony",
+    "p": "noun",
+    "d": "A formal public event, such as a graduation",
+    "ar": "حَفل / مَراسِم"
+   },
+   {
+    "w": "count",
+    "p": "verb",
+    "d": "To say numbers in order; also, to be important",
+    "ar": "يَعُدّ / يُهِمّ"
+   },
+   {
+    "w": "despite",
+    "p": "preposition",
+    "d": "Without being affected by something",
+    "ar": "بِالرَّغم مِن"
+   },
+   {
+    "w": "essay",
+    "p": "noun",
+    "d": "A short piece of writing about one subject",
+    "ar": "مَقال"
+   },
+   {
+    "w": "explanation",
+    "p": "noun",
+    "d": "The reasons you give to make something clear",
+    "ar": "شَرح / تَفسير"
+   },
+   {
+    "w": "fairly",
+    "p": "adverb",
+    "d": "More than a little, but less than very",
+    "ar": "إلى حَدٍّ ما"
+   },
+   {
+    "w": "fee",
+    "p": "noun",
+    "d": "An amount of money you pay for a service or a course",
+    "ar": "رَسم"
+   },
+   {
+    "w": "lecture",
+    "p": "noun",
+    "d": "A formal talk given to a group of students",
+    "ar": "مُحاضَرة"
+   },
+   {
+    "w": "mention",
+    "p": "verb",
+    "d": "To say or write something briefly",
+    "ar": "يَذكُر"
+   },
+   {
+    "w": "obvious",
+    "p": "adjective",
+    "d": "Easy to see or understand",
+    "ar": "واضِح"
+   },
+   {
+    "w": "obviously",
+    "p": "adverb",
+    "d": "In a way that is easy to see; clearly",
+    "ar": "بِوُضوح"
+   },
+   {
+    "w": "partly",
+    "p": "adverb",
+    "d": "To some degree, but not completely",
+    "ar": "جُزئيّاً"
+   },
+   {
+    "w": "perfectly",
+    "p": "adverb",
+    "d": "Completely, or in a perfect way",
+    "ar": "تَماماً / بِإتقان"
+   },
+   {
+    "w": "proper",
+    "p": "adjective",
+    "d": "Real, correct or suitable",
+    "ar": "مُناسِب / صَحيح"
+   },
+   {
+    "w": "properly",
+    "p": "adverb",
+    "d": "Correctly, or in a suitable way",
+    "ar": "بِشَكل صَحيح"
+   },
+   {
+    "w": "punish",
+    "p": "verb",
+    "d": "To make someone suffer because they have done something wrong",
+    "ar": "يُعاقِب"
+   },
+   {
+    "w": "qualification",
+    "p": "noun",
+    "d": "An official record that you have passed an exam or finished a course",
+    "ar": "مُؤَهِّل"
+   },
+   {
+    "w": "qualified",
+    "p": "adjective",
+    "d": "Having passed the exams or training needed for a job",
+    "ar": "مُؤَهَّل"
+   },
+   {
+    "w": "regarding",
+    "p": "preposition",
+    "d": "About; on the subject of",
+    "ar": "بِخُصوص"
+   },
+   {
+    "w": "register",
+    "p": "verb",
+    "d": "To put your name on an official list",
+    "ar": "يُسَجِّل"
+   },
+   {
+    "w": "review",
+    "p": "verb / noun",
+    "d": "To study something again; a report that gives an opinion",
+    "ar": "يُراجِع / مُراجَعة"
+   },
+   {
+    "w": "revise",
+    "p": "verb",
+    "d": "To study again before an exam; also, to change a piece of writing",
+    "ar": "يُراجِع / يُنَقِّح"
+   },
+   {
+    "w": "revision",
+    "p": "noun",
+    "d": "Studying again before an exam",
+    "ar": "مُراجَعة"
+   },
+   {
+    "w": "rule",
+    "p": "noun",
+    "d": "An instruction that says what is allowed and what is not",
+    "ar": "قاعِدة"
+   },
+   {
+    "w": "satisfied",
+    "p": "adjective",
+    "d": "Pleased, because you got what you wanted",
+    "ar": "راضٍ"
+   },
+   {
+    "w": "secondary",
+    "p": "adjective",
+    "d": "Relating to school for students aged about 11 to 18; also, less important",
+    "ar": "ثانَويّ"
+   },
+   {
+    "w": "session",
+    "p": "noun",
+    "d": "A period of time used for one activity",
+    "ar": "جَلسة / حِصّة"
+   },
+   {
+    "w": "smart",
+    "p": "adjective",
+    "d": "Intelligent; also, tidy and well dressed",
+    "ar": "ذَكيّ / أنيق"
+   },
+   {
+    "w": "strict",
+    "p": "adjective",
+    "d": "Expecting rules to be obeyed",
+    "ar": "صارِم"
+   },
+   {
+    "w": "stuff",
+    "p": "noun",
+    "d": "Things in general (informal)",
+    "ar": "أشياء"
+   },
+   {
+    "w": "suited",
+    "p": "adjective",
+    "d": "Right for a particular person or situation",
+    "ar": "مُناسِب"
+   },
+   {
+    "w": "surprising",
+    "p": "adjective",
+    "d": "Not expected",
+    "ar": "مُفاجِئ"
+   },
+   {
+    "w": "temporary",
+    "p": "adjective",
+    "d": "Lasting for only a short time",
+    "ar": "مُؤَقَّت"
+   },
+   {
+    "w": "totally",
+    "p": "adverb",
+    "d": "Completely",
+    "ar": "كُلّيّاً"
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "theme": "Health",
+  "colour": "#7B2D26",
+  "dark": "#5A2019",
+  "quiz": "https://nana390-tech.github.io/IELTS-Series-Vocab-List-2-Health-QUIZ/",
+  "read": "https://nana390-tech.github.io/Vocab-List-2--Reading-HEALTH/",
+  "reading": "The Injuries We Ignore",
+  "words": [
+   {
+    "w": "ankle",
+    "p": "noun",
+    "d": "The joint between your foot and your leg",
+    "ar": "كاحِل"
+   },
+   {
+    "w": "bandage",
+    "p": "noun",
+    "d": "A long piece of cloth that you tie around an injury",
+    "ar": "ضِماد"
+   },
+   {
+    "w": "beef",
+    "p": "noun",
+    "d": "Meat from a cow",
+    "ar": "لَحم بَقَر"
+   },
+   {
+    "w": "blind",
+    "p": "adjective",
+    "d": "Not able to see",
+    "ar": "كَفيف"
+   },
+   {
+    "w": "cancer",
+    "p": "noun",
+    "d": "A serious illness in which cells grow in a way that is not normal",
+    "ar": "سَرَطان"
+   },
+   {
+    "w": "cheek",
+    "p": "noun",
+    "d": "The soft part of your face below each eye",
+    "ar": "خَدّ"
+   },
+   {
+    "w": "chin",
+    "p": "noun",
+    "d": "The part of your face below your mouth",
+    "ar": "ذَقن"
+   },
+   {
+    "w": "condition",
+    "p": "noun",
+    "d": "An illness or health problem; also, the state something is in",
+    "ar": "حالة صِحّيّة / حالة"
+   },
+   {
+    "w": "contest",
+    "p": "noun",
+    "d": "A competition",
+    "ar": "مُسابَقة"
+   },
+   {
+    "w": "diagram",
+    "p": "noun",
+    "d": "A simple drawing that explains how something works",
+    "ar": "رَسم تَوضيحيّ"
+   },
+   {
+    "w": "disabled",
+    "p": "adjective",
+    "d": "Having an illness or injury that makes some activities difficult",
+    "ar": "ذو إعاقة"
+   },
+   {
+    "w": "elbow",
+    "p": "noun",
+    "d": "The joint in the middle of your arm",
+    "ar": "مِرفَق"
+   },
+   {
+    "w": "give sth up",
+    "p": "phrasal verb",
+    "d": "To stop doing something, especially a habit",
+    "ar": "يُقلِع عن"
+   },
+   {
+    "w": "heel",
+    "p": "noun",
+    "d": "The back part of your foot",
+    "ar": "كَعب"
+   },
+   {
+    "w": "inform",
+    "p": "verb",
+    "d": "To tell someone about something officially",
+    "ar": "يُبلِغ"
+   },
+   {
+    "w": "ingredient",
+    "p": "noun",
+    "d": "One of the foods you use to make a dish",
+    "ar": "مُكَوِّن"
+   },
+   {
+    "w": "knee",
+    "p": "noun",
+    "d": "The joint in the middle of your leg",
+    "ar": "رُكبة"
+   },
+   {
+    "w": "lip",
+    "p": "noun",
+    "d": "One of the two soft edges of your mouth",
+    "ar": "شَفة"
+   },
+   {
+    "w": "membership",
+    "p": "noun",
+    "d": "Belonging to a club, a group or an organization",
+    "ar": "عُضويّة"
+   },
+   {
+    "w": "outdoor",
+    "p": "adjective",
+    "d": "Happening or used outside, not inside a building",
+    "ar": "في الهَواء الطَلق"
+   },
+   {
+    "w": "pants",
+    "p": "noun",
+    "d": "Underwear worn below the waist; in American English, trousers",
+    "ar": "مَلابِس داخِليّة / بَنطال"
+   },
+   {
+    "w": "patient",
+    "p": "noun / adjective",
+    "d": "Someone who is receiving medical treatment; able to wait calmly",
+    "ar": "مَريض / صَبور"
+   },
+   {
+    "w": "pill",
+    "p": "noun",
+    "d": "A small hard piece of medicine that you swallow",
+    "ar": "حَبّة دَواء"
+   },
+   {
+    "w": "powder",
+    "p": "noun",
+    "d": "A dry substance made of very small pieces",
+    "ar": "مَسحوق"
+   },
+   {
+    "w": "pregnant",
+    "p": "adjective",
+    "d": "Having a baby growing inside the body",
+    "ar": "حامِل"
+   },
+   {
+    "w": "raw",
+    "p": "adjective",
+    "d": "Not cooked",
+    "ar": "نَيِّئ"
+   },
+   {
+    "w": "recover",
+    "p": "verb",
+    "d": "To become healthy again after an illness",
+    "ar": "يَتَعافى"
+   },
+   {
+    "w": "shave",
+    "p": "verb",
+    "d": "To cut hair off your face or body with a razor",
+    "ar": "يَحلِق"
+   },
+   {
+    "w": "shoulder",
+    "p": "noun",
+    "d": "The part of your body between your neck and your arm",
+    "ar": "كَتِف"
+   },
+   {
+    "w": "skin",
+    "p": "noun",
+    "d": "The outer layer of a person's or an animal's body",
+    "ar": "جِلد"
+   },
+   {
+    "w": "sore",
+    "p": "adjective",
+    "d": "Painful, especially when touched or used",
+    "ar": "مُؤلِم"
+   },
+   {
+    "w": "tablet",
+    "p": "noun",
+    "d": "A small round piece of medicine",
+    "ar": "قُرص دَواء"
+   },
+   {
+    "w": "tear",
+    "p": "verb / noun",
+    "d": "To pull something so that it comes apart; a drop of liquid from your eye",
+    "ar": "يُمَزِّق / دَمعة"
+   },
+   {
+    "w": "throat",
+    "p": "noun",
+    "d": "The back of your mouth and the tube inside your neck",
+    "ar": "حَلق"
+   },
+   {
+    "w": "thumb",
+    "p": "noun",
+    "d": "The short thick finger at the side of your hand",
+    "ar": "إبهام"
+   },
+   {
+    "w": "tongue",
+    "p": "noun",
+    "d": "The soft part inside your mouth used for tasting and speaking",
+    "ar": "لِسان"
+   },
+   {
+    "w": "track",
+    "p": "noun",
+    "d": "A path or a course used for running or racing; also, one song on an album",
+    "ar": "مَضمار / مَسار"
+   },
+   {
+    "w": "under control",
+    "p": "phrase",
+    "d": "Being managed successfully",
+    "ar": "تَحت السَيطَرة"
+   },
+   {
+    "w": "unexpected",
+    "p": "adjective",
+    "d": "Surprising, because you did not think it would happen",
+    "ar": "غَير مُتَوَقَّع"
+   },
+   {
+    "w": "virus",
+    "p": "noun",
+    "d": "A very small living thing that gets inside your body and causes illness",
+    "ar": "فَيروس"
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "theme": "Communication",
+  "colour": "#11505E",
+  "dark": "#0B3A45",
+  "quiz": "https://nana390-tech.github.io/Vocab-List-3---Communication-QUIZ/",
+  "read": "https://nana390-tech.github.io/Vocab-List-3-Reading-Communication-/",
+  "reading": "The Message and the Machine",
+  "words": [
+   {
+    "w": "according to",
+    "p": "preposition",
+    "d": "As said by someone, or as shown by something",
+    "ar": "وَفقاً لِـ / حَسَب"
+   },
+   {
+    "w": "advertise",
+    "p": "verb",
+    "d": "To tell people about a product so they will buy it; also, to ask publicly for someone you need",
+    "ar": "يُعلِن / يُروِّج"
+   },
+   {
+    "w": "attraction",
+    "p": "noun",
+    "d": "Something that makes people come to a place or want something",
+    "ar": "عامِل جَذب / جاذِبيّة"
+   },
+   {
+    "w": "button",
+    "p": "noun",
+    "d": "A small object that fastens clothes; also a switch you press",
+    "ar": "زِرّ"
+   },
+   {
+    "w": "concentrate",
+    "p": "verb",
+    "d": "To think hard about one thing and nothing else",
+    "ar": "يُرَكِّز"
+   },
+   {
+    "w": "decision",
+    "p": "noun",
+    "d": "A choice you make after thinking about the possibilities",
+    "ar": "قَرار"
+   },
+   {
+    "w": "depressed",
+    "p": "adjective",
+    "d": "Very sad, often for a long time",
+    "ar": "مُكتَئِب"
+   },
+   {
+    "w": "display",
+    "p": "noun / verb",
+    "d": "A collection of things for people to look at; the screen of a device; to arrange something so people can see it",
+    "ar": "عَرْض / شاشة / يَعرِض"
+   },
+   {
+    "w": "doubt",
+    "p": "noun",
+    "d": "A feeling of being uncertain, or of not trusting something",
+    "ar": "شَكّ"
+   },
+   {
+    "w": "embarrassed",
+    "p": "adjective",
+    "d": "Feeling ashamed or shy",
+    "ar": "مُحرَج / خَجِل"
+   },
+   {
+    "w": "embarrassing",
+    "p": "adjective",
+    "d": "Making you feel embarrassed",
+    "ar": "مُحرِج"
+   },
+   {
+    "w": "exhibition",
+    "p": "noun",
+    "d": "An event where things such as paintings or technology are shown to the public",
+    "ar": "مَعرِض"
+   },
+   {
+    "w": "expect",
+    "p": "verb",
+    "d": "To think that something will happen",
+    "ar": "يَتَوَقَّع"
+   },
+   {
+    "w": "friendship",
+    "p": "noun",
+    "d": "A relationship between friends",
+    "ar": "صَداقة"
+   },
+   {
+    "w": "gain",
+    "p": "verb",
+    "d": "To get something good; also, to increase",
+    "ar": "يَكتَسِب / يَزداد"
+   },
+   {
+    "w": "issue",
+    "p": "noun",
+    "d": "An important subject or problem that people are talking about",
+    "ar": "قَضِيّة / مَسألة"
+   },
+   {
+    "w": "lock",
+    "p": "noun / verb",
+    "d": "The thing you close a door with using a key; to fasten something with a key",
+    "ar": "قُفل / يُقفِل"
+   },
+   {
+    "w": "media",
+    "p": "noun",
+    "d": "Newspapers, TV, radio and the internet, thought of as one group",
+    "ar": "وَسائِل الإعلام"
+   },
+   {
+    "w": "particularly",
+    "p": "adverb",
+    "d": "Especially",
+    "ar": "خُصوصاً / بِشَكل خاص"
+   },
+   {
+    "w": "persuade",
+    "p": "verb",
+    "d": "To make someone agree to do something by talking to them",
+    "ar": "يُقنِع"
+   },
+   {
+    "w": "poem",
+    "p": "noun",
+    "d": "A piece of writing with short lines, often with rhyme",
+    "ar": "قَصيدة"
+   },
+   {
+    "w": "poetry",
+    "p": "noun",
+    "d": "Poems in general (uncountable)",
+    "ar": "شِعر"
+   },
+   {
+    "w": "political",
+    "p": "adjective",
+    "d": "Relating to politics and government",
+    "ar": "سِياسيّ"
+   },
+   {
+    "w": "publish",
+    "p": "verb",
+    "d": "To prepare and print or release something so people can read or buy it",
+    "ar": "يَنشُر"
+   },
+   {
+    "w": "reader",
+    "p": "noun",
+    "d": "Someone who reads; also a simple book for language learners",
+    "ar": "قارِئ / كِتاب قِراءة مُبَسَّط"
+   },
+   {
+    "w": "realistic",
+    "p": "adjective",
+    "d": "Showing things as they really are, or seeming real",
+    "ar": "واقِعيّ"
+   },
+   {
+    "w": "recording",
+    "p": "noun",
+    "d": "Sound or moving pictures that have been recorded",
+    "ar": "تَسجيل"
+   },
+   {
+    "w": "regret",
+    "p": "verb",
+    "d": "To feel sorry about something you did",
+    "ar": "يَندَم على"
+   },
+   {
+    "w": "regular",
+    "p": "adjective",
+    "d": "Happening often at the same time; following the usual grammar pattern; standard size",
+    "ar": "مُنتَظِم / قِياسيّ"
+   },
+   {
+    "w": "regularly",
+    "p": "adverb",
+    "d": "At the same time each day or week; often",
+    "ar": "بِانتِظام"
+   },
+   {
+    "w": "relatively",
+    "p": "adverb",
+    "d": "Fairly, when you compare it with other things",
+    "ar": "نِسبِيّاً"
+   },
+   {
+    "w": "remind",
+    "p": "verb",
+    "d": "To make someone remember something",
+    "ar": "يُذَكِّر"
+   },
+   {
+    "w": "search",
+    "p": "noun / verb",
+    "d": "Looking for information on a computer, or trying to find something",
+    "ar": "بَحث / يَبحَث"
+   },
+   {
+    "w": "secret",
+    "p": "noun / adjective",
+    "d": "Something you tell no one; not allowed to be known by others",
+    "ar": "سِرّ / سِرّيّ"
+   },
+   {
+    "w": "secretly",
+    "p": "adverb",
+    "d": "In a secret way",
+    "ar": "سِرّاً"
+   },
+   {
+    "w": "situation",
+    "p": "noun",
+    "d": "The set of things happening at a particular time and place",
+    "ar": "وَضع / مَوقِف"
+   },
+   {
+    "w": "style",
+    "p": "noun",
+    "d": "A way of doing something typical of a person or period; a way of designing clothes, hair, etc.",
+    "ar": "أُسلوب / طِراز"
+   },
+   {
+    "w": "system",
+    "p": "noun",
+    "d": "A set of connected pieces of equipment that work together",
+    "ar": "نِظام"
+   },
+   {
+    "w": "unlikely",
+    "p": "adjective",
+    "d": "Not expected to happen",
+    "ar": "مِن غَير المُرَجَّح"
+   },
+   {
+    "w": "western",
+    "p": "adjective",
+    "d": "In or from the west of an area; or relating to North America and Western Europe",
+    "ar": "غَربيّ"
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "theme": "Tourism",
+  "colour": "#1F3E6E",
+  "dark": "#16294D",
+  "quiz": "https://nana390-tech.github.io/Vocab-List-4---Tourism/",
+  "read": "https://nana390-tech.github.io/Vocab-List-4-Reading-Tourism/",
+  "reading": "The Town That Tourism Found",
+  "words": [
+   {
+    "w": "accompany",
+    "p": "verb",
+    "d": "To go somewhere with someone; also, to be served or supplied with something else",
+    "ar": "يُرافِق / يُقَدَّم مع"
+   },
+   {
+    "w": "arrival",
+    "p": "noun",
+    "d": "The act of coming to a place",
+    "ar": "وُصول"
+   },
+   {
+    "w": "captain",
+    "p": "noun",
+    "d": "The leader of a team (or of a ship or aircraft)",
+    "ar": "قائِد / كابتن"
+   },
+   {
+    "w": "central",
+    "p": "adjective",
+    "d": "In or near the centre of a place or thing",
+    "ar": "مَركَزيّ / وَسَط"
+   },
+   {
+    "w": "consist of",
+    "p": "phrasal verb",
+    "d": "To be made of something",
+    "ar": "يَتَكَوَّن مِن"
+   },
+   {
+    "w": "custom",
+    "p": "noun",
+    "d": "A habit or a tradition",
+    "ar": "عادة / تَقليد"
+   },
+   {
+    "w": "deliver",
+    "p": "verb",
+    "d": "To take letters or things to a person or place",
+    "ar": "يُوصِّل / يُسَلِّم"
+   },
+   {
+    "w": "delivery",
+    "p": "noun",
+    "d": "The act of taking letters or things to a person or place",
+    "ar": "تَوصيل / تَسليم"
+   },
+   {
+    "w": "departure",
+    "p": "noun",
+    "d": "The act of leaving a place",
+    "ar": "مُغادَرة"
+   },
+   {
+    "w": "district",
+    "p": "noun",
+    "d": "A part of a city or country",
+    "ar": "مِنطَقة / حَيّ"
+   },
+   {
+    "w": "efficient",
+    "p": "adjective",
+    "d": "Working well and not wasting time or energy",
+    "ar": "فَعّال / ذو كَفاءة"
+   },
+   {
+    "w": "explore",
+    "p": "verb",
+    "d": "To go around a place you have never been, to find out what is there",
+    "ar": "يَستَكشِف"
+   },
+   {
+    "w": "handle",
+    "p": "verb",
+    "d": "To deal with something, or be in charge of it",
+    "ar": "يَتَعامَل مع / يُدير"
+   },
+   {
+    "w": "hardly",
+    "p": "adverb",
+    "d": "Almost not, or only a very small amount",
+    "ar": "بِالكاد"
+   },
+   {
+    "w": "hire",
+    "p": "verb",
+    "d": "To pay money in order to use something for a short time",
+    "ar": "يَستَأجِر"
+   },
+   {
+    "w": "in advance",
+    "p": "adverb phrase",
+    "d": "Before a particular time",
+    "ar": "مُقَدَّماً"
+   },
+   {
+    "w": "in common",
+    "p": "phrase",
+    "d": "Having the same interests, experiences or qualities as someone else",
+    "ar": "مُشتَرَك"
+   },
+   {
+    "w": "kindly",
+    "p": "adverb",
+    "d": "In a kind way",
+    "ar": "بِلُطف"
+   },
+   {
+    "w": "lorry",
+    "p": "noun",
+    "d": "A large road vehicle for carrying things from place to place",
+    "ar": "شاحِنة"
+   },
+   {
+    "w": "peace",
+    "p": "noun",
+    "d": "A situation in which there is quiet and calm",
+    "ar": "هُدوء / سَلام"
+   },
+   {
+    "w": "peaceful",
+    "p": "adjective",
+    "d": "Quiet and calm",
+    "ar": "هادِئ"
+   },
+   {
+    "w": "port",
+    "p": "noun",
+    "d": "A town or area next to water where ships arrive and leave",
+    "ar": "مِيناء"
+   },
+   {
+    "w": "preparation",
+    "p": "noun",
+    "d": "The things you do to get ready for something",
+    "ar": "تَحضير / اِستِعداد"
+   },
+   {
+    "w": "property",
+    "p": "noun",
+    "d": "Things that belong to someone",
+    "ar": "مُمتَلَكات"
+   },
+   {
+    "w": "public",
+    "p": "adjective / noun",
+    "d": "For everyone to use; also, all the ordinary people in a place",
+    "ar": "عامّ / الجُمهور"
+   },
+   {
+    "w": "rail",
+    "p": "noun",
+    "d": "Trains as a method of transport",
+    "ar": "سِكَك حَديديّة"
+   },
+   {
+    "w": "rare",
+    "p": "adjective",
+    "d": "Very unusual",
+    "ar": "نادِر"
+   },
+   {
+    "w": "rather",
+    "p": "adverb",
+    "d": "Slightly; to a small degree",
+    "ar": "نَوعاً ما / إلى حَدٍّ ما"
+   },
+   {
+    "w": "reach",
+    "p": "verb",
+    "d": "To arrive somewhere",
+    "ar": "يَصِل إلى"
+   },
+   {
+    "w": "realize",
+    "p": "verb",
+    "d": "To notice or understand something you did not understand before (British spelling: realise — both are correct)",
+    "ar": "يُدرِك"
+   },
+   {
+    "w": "resort",
+    "p": "noun",
+    "d": "A place where many people go for a holiday",
+    "ar": "مُنتَجَع"
+   },
+   {
+    "w": "romantic",
+    "p": "adjective",
+    "d": "Relating to exciting feelings of love; or about a love story",
+    "ar": "رومانسيّ"
+   },
+   {
+    "w": "route",
+    "p": "noun",
+    "d": "The roads you follow to get from one place to another",
+    "ar": "طَريق / مَسار"
+   },
+   {
+    "w": "ruin",
+    "p": "noun",
+    "d": "The broken parts left from an old building or town",
+    "ar": "أطلال / خَرائِب"
+   },
+   {
+    "w": "sail",
+    "p": "verb",
+    "d": "To travel in, or control, a boat or ship",
+    "ar": "يُبحِر"
+   },
+   {
+    "w": "suitable",
+    "p": "adjective",
+    "d": "Acceptable or right for someone or something",
+    "ar": "مُناسِب"
+   },
+   {
+    "w": "towards",
+    "p": "preposition",
+    "d": "In the direction of someone or something",
+    "ar": "نَحوَ / باتِّجاه"
+   },
+   {
+    "w": "tunnel",
+    "p": "noun",
+    "d": "A long passage under the ground or through a mountain",
+    "ar": "نَفَق"
+   },
+   {
+    "w": "vehicle",
+    "p": "noun",
+    "d": "Something such as a car or bus that takes people from place to place",
+    "ar": "مَركَبة"
+   },
+   {
+    "w": "via",
+    "p": "preposition",
+    "d": "Going through or stopping at a place on the way; also, using a particular system to send or receive something",
+    "ar": "عَبرَ / بِواسِطة"
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "theme": "News",
+  "colour": "#B3202C",
+  "dark": "#7F161F",
+  "quiz": "https://nana390-tech.github.io/Vocab-List-5-NEWS-QUIZ/",
+  "read": "https://nana390-tech.github.io/Vocab-List-5--Reading-NEWS/",
+  "reading": "The Towers That Drink Fog",
+  "words": [
+   {
+    "w": "accurately",
+    "p": "adverb",
+    "d": "In a correct or exact way",
+    "ar": "بِدِقّة"
+   },
+   {
+    "w": "approach",
+    "p": "verb",
+    "d": "To come close in distance or time",
+    "ar": "يَقتَرِب مِن"
+   },
+   {
+    "w": "approximately",
+    "p": "adverb",
+    "d": "Close to a particular number or time, but not exactly that number or time",
+    "ar": "تَقريباً"
+   },
+   {
+    "w": "atmosphere",
+    "p": "noun",
+    "d": "The feeling that exists in a place or situation",
+    "ar": "أجواء / جَوّ عام"
+   },
+   {
+    "w": "attach",
+    "p": "verb",
+    "d": "To join one thing to another; also, to join a file to an email",
+    "ar": "يَربِط / يُرفِق"
+   },
+   {
+    "w": "backwards",
+    "p": "adverb",
+    "d": "Towards the direction behind you",
+    "ar": "إلى الخَلف"
+   },
+   {
+    "w": "charity",
+    "p": "noun",
+    "d": "An official organization that gives money, food or help to people who need it",
+    "ar": "جَمعيّة خَيريّة"
+   },
+   {
+    "w": "convince",
+    "p": "verb",
+    "d": "To make someone believe that something is true",
+    "ar": "يُقنِع"
+   },
+   {
+    "w": "creature",
+    "p": "noun",
+    "d": "Anything that lives but is not a plant",
+    "ar": "مَخلوق / كائِن حَيّ"
+   },
+   {
+    "w": "crop",
+    "p": "noun",
+    "d": "A plant such as a grain, fruit or vegetable that is grown in large amounts by farmers",
+    "ar": "مَحصول"
+   },
+   {
+    "w": "engineering",
+    "p": "noun",
+    "d": "The work of an engineer, or the study of this work",
+    "ar": "هَندَسة"
+   },
+   {
+    "w": "exact",
+    "p": "adjective",
+    "d": "Completely correct",
+    "ar": "دَقيق / مَضبوط"
+   },
+   {
+    "w": "explode",
+    "p": "verb",
+    "d": "To burst with noise and force",
+    "ar": "يَنفَجِر"
+   },
+   {
+    "w": "faucet",
+    "p": "noun",
+    "d": "The American English word for a tap — the part at the end of a pipe that controls the flow of water",
+    "ar": "صَنبور (إنجليزيّة أمريكيّة)"
+   },
+   {
+    "w": "forecast",
+    "p": "noun",
+    "d": "Something that says what will happen in the future",
+    "ar": "تَوَقُّعات / نَشرة"
+   },
+   {
+    "w": "forward",
+    "p": "adverb",
+    "d": "Towards the direction that is in front of you",
+    "ar": "إلى الأمام"
+   },
+   {
+    "w": "grateful",
+    "p": "adjective",
+    "d": "Wanting to say 'thank you' to someone who has done something good for you",
+    "ar": "مُمتَنّ / شاكِر"
+   },
+   {
+    "w": "historical",
+    "p": "adjective",
+    "d": "Relating to the past",
+    "ar": "تاريخيّ"
+   },
+   {
+    "w": "imagination",
+    "p": "noun",
+    "d": "The ability to have ideas or pictures in your mind; the part of your mind that creates things that are not real",
+    "ar": "خَيال"
+   },
+   {
+    "w": "in favour (of)",
+    "p": "phrase",
+    "d": "Agreeing with a plan or idea",
+    "ar": "مُؤَيِّد لِـ"
+   },
+   {
+    "w": "leaf",
+    "p": "noun",
+    "d": "A flat, green part of a plant that grows from a stem or branch (plural: leaves)",
+    "ar": "وَرَقة شَجَر"
+   },
+   {
+    "w": "limited",
+    "p": "adjective",
+    "d": "Small in amount or number",
+    "ar": "مَحدود"
+   },
+   {
+    "w": "mostly",
+    "p": "adverb",
+    "d": "Mainly, or most of the time",
+    "ar": "في الغالِب"
+   },
+   {
+    "w": "mystery",
+    "p": "noun",
+    "d": "Something strange that cannot be explained or understood",
+    "ar": "لُغز / غُموض"
+   },
+   {
+    "w": "nearby",
+    "p": "adverb / adjective",
+    "d": "Not far away",
+    "ar": "قَريب / بِالقُرب"
+   },
+   {
+    "w": "nowhere",
+    "p": "adverb",
+    "d": "Not anywhere",
+    "ar": "لا مَكان"
+   },
+   {
+    "w": "pipe",
+    "p": "noun",
+    "d": "A long tube that liquid or gas can move through",
+    "ar": "أُنبوب"
+   },
+   {
+    "w": "plenty",
+    "p": "pronoun / quantifier",
+    "d": "A lot of something, more than you need",
+    "ar": "الكَثير / وَفرة"
+   },
+   {
+    "w": "plug",
+    "p": "noun",
+    "d": "The object with metal parts that connects equipment to the electricity supply; also something you put in a hole to block it",
+    "ar": "قابِس / سِدادة"
+   },
+   {
+    "w": "previously",
+    "p": "adverb",
+    "d": "Before",
+    "ar": "سابِقاً"
+   },
+   {
+    "w": "pure",
+    "p": "adjective",
+    "d": "Not mixed with anything else; also clean and healthy",
+    "ar": "نَقيّ / خالِص"
+   },
+   {
+    "w": "rescue",
+    "p": "verb / noun",
+    "d": "To save someone from a dangerous situation; the act of saving someone",
+    "ar": "يُنقِذ / إنقاذ"
+   },
+   {
+    "w": "scientific",
+    "p": "adjective",
+    "d": "Relating to science",
+    "ar": "عِلميّ"
+   },
+   {
+    "w": "shocked",
+    "p": "adjective",
+    "d": "Very surprised and upset",
+    "ar": "مَصدوم"
+   },
+   {
+    "w": "spoil",
+    "p": "verb",
+    "d": "To stop something from being enjoyable or successful",
+    "ar": "يُفسِد"
+   },
+   {
+    "w": "take action",
+    "p": "idiom",
+    "d": "To do something in order to solve a problem",
+    "ar": "يَتَّخِذ إجراءً"
+   },
+   {
+    "w": "tap",
+    "p": "noun",
+    "d": "The part at the end of a pipe that controls the flow of water (American English: faucet)",
+    "ar": "صَنبور"
+   },
+   {
+    "w": "tower",
+    "p": "noun",
+    "d": "A very tall, narrow building, or part of a building",
+    "ar": "بُرج"
+   },
+   {
+    "w": "unpleasant",
+    "p": "adjective",
+    "d": "Not enjoyable or pleasant",
+    "ar": "غَير سارّ / مُزعِج"
+   },
+   {
+    "w": "useless",
+    "p": "adjective",
+    "d": "Does not work well, or has no effect",
+    "ar": "عَديم الفائِدة"
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "theme": "Commerce",
+  "colour": "#6B4A2F",
+  "dark": "#3B2A1E",
+  "quiz": "https://nana390-tech.github.io/IELTS-Series-Vocab-List-6-Commerce-QUIZ/",
+  "read": "https://nana390-tech.github.io/IELTS-Series-Vocab-List-6-Commerce-READING/",
+  "reading": "The Price of Convenience",
+  "words": [
+   {
+    "w": "account",
+    "p": "noun",
+    "d": "An arrangement with a bank to keep your money there",
+    "ar": "حِساب بَنكيّ"
+   },
+   {
+    "w": "agency",
+    "p": "noun",
+    "d": "A business that provides a service",
+    "ar": "وَكالة"
+   },
+   {
+    "w": "assistant",
+    "p": "noun",
+    "d": "Someone whose job is to help a person who has a more important job",
+    "ar": "مُساعِد"
+   },
+   {
+    "w": "background",
+    "p": "noun",
+    "d": "A person's education and family",
+    "ar": "خَلفيّة"
+   },
+   {
+    "w": "branch",
+    "p": "noun",
+    "d": "One of many shops or offices that are part of a company; also one of the parts of a tree",
+    "ar": "فَرع / غُصن"
+   },
+   {
+    "w": "candidate",
+    "p": "noun",
+    "d": "Someone who is taking an exam",
+    "ar": "مُتَقَدِّم لِامتِحان"
+   },
+   {
+    "w": "chairman, chairwoman",
+    "p": "noun",
+    "d": "A man or woman who controls a meeting, a company or another organization",
+    "ar": "رَئيس / رَئيسة مَجلِس"
+   },
+   {
+    "w": "cheerful",
+    "p": "adjective",
+    "d": "Happy",
+    "ar": "مَرِح / بَشوش"
+   },
+   {
+    "w": "conference",
+    "p": "noun",
+    "d": "A large meeting, often lasting a few days, where people talk about a subject",
+    "ar": "مُؤتَمَر"
+   },
+   {
+    "w": "confirm",
+    "p": "verb",
+    "d": "To make sure an arrangement will happen, often by phone or in writing",
+    "ar": "يُؤَكِّد"
+   },
+   {
+    "w": "couple",
+    "p": "noun",
+    "d": "Two or a few; also two people who are married or in a relationship",
+    "ar": "اِثنان / زَوجان"
+   },
+   {
+    "w": "credit",
+    "p": "noun",
+    "d": "A way of buying something and paying later; also an amount of money in your account or on your phone",
+    "ar": "اِئتِمان / رَصيد"
+   },
+   {
+    "w": "deposit",
+    "p": "noun",
+    "d": "A payment that you make immediately when you decide to buy something",
+    "ar": "عَربون / دَفعة أولى"
+   },
+   {
+    "w": "direct",
+    "p": "adjective / verb",
+    "d": "Going straight from one place to another without stopping; to show someone the way; to tell actors what to do",
+    "ar": "مُباشِر / يُرشِد / يُخرِج"
+   },
+   {
+    "w": "directly",
+    "p": "adverb",
+    "d": "With no other person or thing involved or in between",
+    "ar": "مُباشَرةً"
+   },
+   {
+    "w": "duty",
+    "p": "noun",
+    "d": "Something you must do because the law says so, or because it is right",
+    "ar": "واجِب"
+   },
+   {
+    "w": "exchange",
+    "p": "noun / verb",
+    "d": "An occasion when you give something and get something else back; also a visit between students of two countries",
+    "ar": "تَبادُل / يُبادِل"
+   },
+   {
+    "w": "honestly",
+    "p": "adverb",
+    "d": "Used to say that you are telling the truth",
+    "ar": "بِصَراحة"
+   },
+   {
+    "w": "in charge of",
+    "p": "phrase",
+    "d": "To be responsible for something",
+    "ar": "مَسؤول عن"
+   },
+   {
+    "w": "label",
+    "p": "noun",
+    "d": "A piece of paper giving information about the object it is attached to; also a company that makes clothes",
+    "ar": "مُلصَق / عَلامة تِجاريّة"
+   },
+   {
+    "w": "loan",
+    "p": "noun",
+    "d": "Money that someone borrows",
+    "ar": "قَرض"
+   },
+   {
+    "w": "owe",
+    "p": "verb",
+    "d": "To have to pay money back to someone who gave you money in the past",
+    "ar": "يَدين بِـ"
+   },
+   {
+    "w": "politically",
+    "p": "adverb",
+    "d": "In a way that is connected with politics",
+    "ar": "سِياسيّاً"
+   },
+   {
+    "w": "politician",
+    "p": "noun",
+    "d": "Someone who works in politics, especially a member of the government",
+    "ar": "سِياسيّ"
+   },
+   {
+    "w": "politics",
+    "p": "noun",
+    "d": "Ideas and activities relating to how a country or area is governed",
+    "ar": "السِياسة"
+   },
+   {
+    "w": "president",
+    "p": "noun",
+    "d": "The highest political position in some countries, usually the leader of the government",
+    "ar": "رَئيس الدَولة"
+   },
+   {
+    "w": "promise",
+    "p": "verb / noun",
+    "d": "To say that you will certainly do or give something; a statement that you will certainly do it",
+    "ar": "يَعِد / وَعد"
+   },
+   {
+    "w": "request",
+    "p": "noun / verb",
+    "d": "The act of asking for something; to ask for something",
+    "ar": "طَلَب / يَطلُب"
+   },
+   {
+    "w": "retire",
+    "p": "verb",
+    "d": "To leave your job and stop working because you are old",
+    "ar": "يَتَقاعَد"
+   },
+   {
+    "w": "role",
+    "p": "noun",
+    "d": "A part in a play or movie",
+    "ar": "دَور"
+   },
+   {
+    "w": "rude",
+    "p": "adjective",
+    "d": "Behaving in a way that is not polite and upsets other people",
+    "ar": "وَقِح / غَير مُهَذَّب"
+   },
+   {
+    "w": "signature",
+    "p": "noun",
+    "d": "Your name written in your own way, which is difficult for someone else to copy",
+    "ar": "تَوقيع"
+   },
+   {
+    "w": "social",
+    "p": "adjective",
+    "d": "Relating to the things you do with other people for enjoyment when you are not working",
+    "ar": "اِجتِماعيّ"
+   },
+   {
+    "w": "tax",
+    "p": "noun",
+    "d": "Money that you have to pay to the government from what you earn or when you buy things",
+    "ar": "ضَريبة"
+   },
+   {
+    "w": "technique",
+    "p": "noun",
+    "d": "A particular way of doing something",
+    "ar": "أُسلوب / تِقنيّة"
+   },
+   {
+    "w": "trade",
+    "p": "noun",
+    "d": "The buying and selling of large numbers of things, especially between countries",
+    "ar": "تِجارة"
+   },
+   {
+    "w": "transfer",
+    "p": "verb",
+    "d": "To move someone or something from one place to another",
+    "ar": "يَنتَقِل / يُحَوِّل"
+   },
+   {
+    "w": "unemployed",
+    "p": "adjective",
+    "d": "Not having a job",
+    "ar": "عاطِل عن العَمَل"
+   },
+   {
+    "w": "vote",
+    "p": "verb / noun",
+    "d": "To choose someone or something in an election or meeting; the act of choosing in this way",
+    "ar": "يُصَوِّت / تَصويت"
+   },
+   {
+    "w": "wage",
+    "p": "noun",
+    "d": "The amount of money a person regularly gets for his or her job",
+    "ar": "أجر"
+   }
+  ]
+ }
+];
+
+const BADGES=[
+ {id:"L1",ic:"📘",t:"Education",d:"List 1 complete"},
+ {id:"L2",ic:"🩺",t:"Health",d:"List 2 complete"},
+ {id:"L3",ic:"📡",t:"Communication",d:"List 3 complete"},
+ {id:"L4",ic:"🧭",t:"Tourism",d:"List 4 complete"},
+ {id:"L5",ic:"📰",t:"News",d:"List 5 complete"},
+ {id:"L6",ic:"💼",t:"Commerce",d:"List 6 complete"},
+ {id:"first",ic:"🌱",t:"First Steps",d:"Your first activity finished"},
+ {id:"half",ic:"🪜",t:"Halfway",d:"Six of the twelve activities"},
+ {id:"all",ic:"🏆",t:"All Six Lists",d:"Every list complete"},
+ {id:"high",ic:"⭐",t:"High Flyer",d:"80% or more in every recorded score"}
+];
+
+/* ============================================================
+   STATE  — done["3q"]=true, scores["3q"]=92
+   ============================================================ */
+const STATE={name:"",done:{},scores:{}};
+const $=id=>document.getElementById(id);
+const key=(n,t)=>n+t;                    // "3q" / "3r"
+
+/* best-effort memory: works when the page is hosted, silently skipped otherwise */
+function remember(){
+  try{ localStorage.setItem("b1plus-hub",JSON.stringify(STATE)); return true; }catch(e){ return false; }
+}
+function recall(){
+  try{
+    const raw=localStorage.getItem("b1plus-hub");
+    if(raw){ const d=JSON.parse(raw); Object.assign(STATE,{name:d.name||"",done:d.done||{},scores:d.scores||{}}); return true; }
+  }catch(e){}
+  return false;
+}
+
+function go(v){
+  ["home","badges","words","progress"].forEach(x=>{
+    $("v"+x[0].toUpperCase()+x.slice(1)).classList.toggle("hide",x!==v);
+    $("nav-"+x).classList.toggle("on",x===v);
+  });
+  window.scrollTo(0,0);
+  if(v==="words") renderWords();
+}
+function esc(s){return (s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function toast(m){
+  const d=document.createElement("div"); d.textContent=m;
+  d.style.cssText="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;"+
+    "padding:12px 20px;border-radius:10px;z-index:200;font-size:15px;max-width:90%;box-shadow:0 6px 20px rgba(0,0,0,.25)";
+  document.body.appendChild(d); setTimeout(()=>d.remove(),2800);
+}
+
+/* ---------- counts ---------- */
+function doneCount(){ return Object.keys(STATE.done).filter(k=>STATE.done[k]).length; }
+function listDone(n){ return !!STATE.done[key(n,"q")] && !!STATE.done[key(n,"r")]; }
+function nextList(){ for(const L of LISTS){ if(!listDone(L.n)) return L.n; } return null; }
+
+/* ---------- list cards ---------- */
+/* one activity row — a live link when the app is online, a plain note when it is not */
+function act(L,t,done,label,sub,score){
+  const url = t==="q" ? L.quiz : L.read;
+  const name = url
+    ? '<a href="'+url+'" target="_blank" rel="noopener" style="color:inherit;font-weight:600">'+label+'</a>'
+    : '<span style="font-weight:600;color:var(--muted)">'+label+'</span>';
+  const open = url
+    ? '<a class="btn sm" href="'+url+'" target="_blank" rel="noopener">Open</a>'
+    : '<span class="pill">Not online yet</span>';
+  return '<div class="act">'+
+    '<label class="tickbox'+(done?" on":"")+'" title="Tick when you have finished this">'+
+      '<input type="checkbox"'+(done?" checked":"")+' onchange="toggle('+L.n+',\''+t+'\')"></label>'+
+    '<span class="nm">'+name+(sub?'<small>'+sub+'</small>':"")+score+'</span>'+
+    open+'</div>';
+}
+
+function renderLists(){
+  const nx=nextList();
+  $("listGrid").innerHTML=LISTS.map(L=>{
+    const q=!!STATE.done[key(L.n,"q")], r=!!STATE.done[key(L.n,"r")];
+    const full=q&&r;
+    const sc=t=>{const v=STATE.scores[key(L.n,t)];return v==null?"":'<small>Your score: '+v+'%</small>';};
+    return '<div class="lc">'+
+      '<div class="lc-top" style="background:'+L.colour+'">'+
+        '<div class="n">'+L.n+'</div>'+
+        '<div class="lbl">List '+L.n+'</div><h3>'+L.theme+'</h3></div>'+
+      '<div class="lc-body">'+
+        '<div class="lc-meta">40 words &nbsp;·&nbsp; 50 quiz questions &nbsp;·&nbsp; 20 reading marks</div>'+
+        act(L,"q",q,"Vocabulary quiz","",sc("q"))+
+        act(L,"r",r,"Reading test","“"+L.reading+"”",sc("r"))+
+      '</div>'+
+      '<div class="lc-foot">'+
+        '<label class="tickbox big'+(full?" on":"")+'" title="Tick when you have finished practising this list">'+
+          '<input type="checkbox"'+(full?" checked":"")+' onchange="toggleList('+L.n+',this.checked)">'+
+          (full?"Finished":"Finished this list")+'</label>'+
+        (full?'<span class="pill done">✓ Badge earned</span>'
+             :(L.n===nx?'<span class="pill next">Up next</span>':'<span class="pill">'+((q?1:0)+(r?1:0))+' of 2 done</span>'))+
+        '<button class="btn alt sm" style="margin-left:auto" onclick="showWords('+L.n+')">The 40 words</button>'+
+      '</div>'+
+    '</div>';
+  }).join("")+
+  '<div class="lc" style="border:2px dashed var(--violet);background:#FBFAFE">'+
+    '<div class="lc-top" style="background:var(--ink)">'+
+      '<div class="n">∑</div><div class="lbl">Reference</div><h3>All 240 words</h3></div>'+
+    '<div class="lc-body">'+
+      '<div class="lc-meta">Every word from the six lists in one place</div>'+
+      '<p style="font-size:15px;margin:0 0 12px">Every word with its meaning in English and Arabic. '+
+      'Search a word for a quick meaning check, or print the whole thing as a study sheet.</p>'+
+    '</div>'+
+    '<div class="lc-foot">'+
+      '<span class="pill">Not counted as an activity</span>'+
+      '<button class="btn sm" style="margin-left:auto" onclick="go(\'words\')">Open the word list</button>'+
+    '</div>'+
+  '</div>';
+
+  const n=doneCount();
+  $("ringNum").textContent=n;
+  $("ringArc").style.strokeDashoffset=String(402-402*(n/12));
+  const nl=nextList();
+  $("upNext").textContent = nl ? "Next up: List "+nl+" — "+LISTS[nl-1].theme : "Every list finished.";
+  renderCert(); renderBadges(); renderProgTable();
+}
+function toggleList(n,on){
+  ["q","r"].forEach(t=>{
+    const k=key(n,t);
+    if(on) STATE.done[k]=true;
+    else { delete STATE.done[k]; delete STATE.scores[k]; }
+  });
+  remember(); renderLists();
+}
+function toggle(n,t){
+  const k=key(n,t);
+  STATE.done[k]=!STATE.done[k];
+  if(!STATE.done[k]) delete STATE.scores[k];
+  remember(); renderLists();
+}
+function showWords(n){
+  go("words");
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",+c.dataset.l===n));
+  FILTER=n; $("wSearch").value=""; renderWords();
+}
+
+/* ---------- badges ---------- */
+function earned(){
+  const got={};
+  LISTS.forEach(L=>{ if(listDone(L.n)) got["L"+L.n]=true; });
+  const n=doneCount();
+  if(n>=1) got.first=true;
+  if(n>=6) got.half=true;
+  if(LISTS.every(L=>listDone(L.n))) got.all=true;
+  const sc=Object.values(STATE.scores);
+  if(sc.length>=4 && sc.every(v=>v>=80)) got.high=true;
+  return got;
+}
+function renderBadges(){
+  const got=earned();
+  $("badgeGrid").innerHTML=BADGES.map(b=>
+    '<div class="bg'+(got[b.id]?" on":"")+'"><div class="ic">'+b.ic+'</div>'+
+    '<div class="t">'+b.t+'</div><div class="d">'+(got[b.id]?b.d:"Locked")+'</div></div>').join("");
+}
+
+/* ---------- word index ---------- */
+let FILTER=0;
+function filterList(n,el){
+  FILTER=n;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
+  el.classList.add("on");
+  renderWords();
+}
+function renderWords(){
+  const term=($("wSearch").value||"").toLowerCase().trim();
+  const rows=[];
+  LISTS.forEach(L=>{
+    if(FILTER&&FILTER!==L.n) return;
+    L.words.forEach(o=>{
+      if(term && !(o.w.toLowerCase().includes(term) || (o.d||"").toLowerCase().includes(term))) return;
+      rows.push({o:o,L:L});
+    });
+  });
+  $("wCount").textContent=rows.length+" word"+(rows.length===1?"":"s")+
+    (FILTER?" in List "+FILTER:" across all six lists")+(term?' matching “'+term+'”':"");
+  const hl=t=>{
+    if(!term) return esc(t);
+    const i=t.toLowerCase().indexOf(term);
+    if(i<0) return esc(t);
+    return esc(t.slice(0,i))+'<mark>'+esc(t.slice(i,i+term.length))+'</mark>'+esc(t.slice(i+term.length));
+  };
+  $("wBody").innerHTML=rows.map((r,i)=>
+    '<tr><td style="color:var(--muted)">'+(i+1)+'</td>'+
+    '<td class="w">'+hl(r.o.w)+'<span class="pos">'+esc(r.o.p)+'</span></td>'+
+    '<td class="mean">'+hl(r.o.d)+'</td>'+
+    '<td class="ar">'+esc(r.o.ar)+'</td>'+
+    '<td><span class="lchip" style="background:'+r.L.colour+'">'+r.L.n+'</span></td></tr>').join("");
+  $("wEmpty").classList.toggle("hide",rows.length>0);
+}
+
+/* ---------- reading result files ---------- */
+function setName(v){ STATE.name=v.trim(); remember(); renderCert(); }
+
+function identify(obj,fileName){
+  // every app writes an "app" field; fall back to the file name
+  const hay=((obj&&obj.app)?obj.app:"")+" "+(fileName||"");
+  const m=hay.match(/(?:wordlist|list|reading test|test)\s*([1-6])/i) || hay.match(/\b([1-6])\b/);
+  const n=m?+m[1]:null;
+  let t=null;
+  if(/reading/i.test(hay)) t="r";
+  else if(/quiz|vocab/i.test(hay)) t="q";
+  else if(obj && obj.outOf===20) t="r";
+  else if(obj && obj.outOf===50) t="q";
+  return (n&&t)?{n:n,t:t}:null;
+}
+function percentOf(obj){
+  if(typeof obj.percent==="number") return Math.round(obj.percent);
+  if(typeof obj.score==="number" && obj.outOf) return Math.round(obj.score/obj.outOf*100);
+  return null;
+}
+function readResults(ev){
+  const files=[...ev.target.files]; if(!files.length) return;
+  const log=[];
+  let left=files.length;
+  files.forEach(f=>{
+    const r=new FileReader();
+    r.onload=()=>{
+      try{
+        const obj=JSON.parse(r.result);
+        const id=identify(obj,f.name);
+        if(!id){ log.push(['bad',f.name,"could not tell which list this file is from"]); }
+        else{
+          const k=key(id.n,id.t);
+          STATE.done[k]=true;
+          const p=percentOf(obj); if(p!=null) STATE.scores[k]=p;
+          if(obj.student && !STATE.name){ STATE.name=obj.student; $("whoName").value=obj.student; }
+          log.push(['ok',f.name,"List "+id.n+" "+(id.t==="q"?"vocabulary quiz":"reading test")+(p!=null?" — "+p+"%":"")]);
+        }
+      }catch(e){ log.push(['bad',f.name,"this is not a result file from one of the apps"]); }
+      if(--left===0) finishImport(log);
+    };
+    r.onerror=()=>{ log.push(['bad',f.name,"the file could not be read"]); if(--left===0) finishImport(log); };
+    r.readAsText(f);
+  });
+  ev.target.value="";
+}
+function finishImport(log){
+  remember(); renderLists();
+  $("importLog").innerHTML='<div style="margin-top:14px">'+log.map(([k,n,m])=>
+    '<div style="padding:8px 12px;border-radius:9px;margin:6px 0;background:'+(k==="ok"?"#E3F2EA":"#FAEDE9")+'">'+
+    (k==="ok"?"✓ ":"✕ ")+'<b>'+esc(n)+'</b> — '+esc(m)+'</div>').join("")+'</div>';
+  const good=log.filter(l=>l[0]==="ok").length;
+  if(good) toast(good+" result"+(good===1?"":"s")+" recorded.");
+}
+/* drag and drop */
+(function(){
+  const z=$("dropZone"); if(!z) return;
+  ["dragenter","dragover"].forEach(e=>z.addEventListener(e,ev=>{ev.preventDefault();z.style.borderColor="var(--violet)";z.style.background="#F0ECFC";}));
+  ["dragleave","drop"].forEach(e=>z.addEventListener(e,ev=>{ev.preventDefault();z.style.borderColor="var(--line)";z.style.background="#FAF9FD";}));
+  z.addEventListener("drop",ev=>{
+    const files=[...(ev.dataTransfer?ev.dataTransfer.files:[])].filter(f=>/\.json$/i.test(f.name));
+    if(!files.length){ toast("Drop the .json result files the apps give you."); return; }
+    readResults({target:{files:files,value:""}});
+  });
+})();
+
+/* ---------- progress table, save / load ---------- */
+function renderProgTable(){
+  const rows=LISTS.map(L=>{
+    const cell=t=>{
+      const k=key(L.n,t), d=STATE.done[k], s=STATE.scores[k];
+      if(!d) return '<span style="color:var(--muted)">not yet</span>';
+      return '<span style="color:var(--green);font-weight:700">✓ done</span>'+(s!=null?' <span style="color:var(--muted)">('+s+'%)</span>':"");
+    };
+    return '<tr><td><span class="lchip" style="background:'+L.colour+'">List '+L.n+'</span> '+L.theme+'</td>'+
+      '<td>'+cell("q")+'</td><td>'+cell("r")+'</td></tr>';
+  }).join("");
+  $("progTable").innerHTML='<thead><tr><th>List</th><th style="width:30%">Vocabulary quiz</th><th style="width:30%">Reading test</th></tr></thead><tbody>'+rows+'</tbody>';
+  $("memNote").textContent = MEM_OK
+    ? "This browser is remembering your progress on this device. Download the progress file if you use a different computer."
+    : "This page cannot store anything in this browser, so download the progress file before you close the page.";
+}
+function saveProgress(){
+  const data={app:"B1+ Vocabulary Practice — course progress",student:STATE.name,date:new Date().toISOString(),
+    activitiesDone:doneCount(),outOf:12,
+    lists:LISTS.map(L=>({list:L.n,theme:L.theme,
+      quiz:{done:!!STATE.done[key(L.n,"q")],percent:STATE.scores[key(L.n,"q")]??null},
+      reading:{done:!!STATE.done[key(L.n,"r")],percent:STATE.scores[key(L.n,"r")]??null}})),
+    badges:Object.keys(earned()),
+    state:{name:STATE.name,done:STATE.done,scores:STATE.scores}};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="B1plus-progress-"+(STATE.name||"student").replace(/\s+/g,"-")+".json";
+  a.click(); URL.revokeObjectURL(a.href);
+  toast("Progress file downloaded.");
+}
+function loadProgress(ev){
+  const f=ev.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const d=JSON.parse(r.result);
+      if(!d.state) throw 0;
+      STATE.name=d.state.name||""; STATE.done=d.state.done||{}; STATE.scores=d.state.scores||{};
+      $("whoName").value=STATE.name;
+      remember(); renderLists();
+      toast("Progress restored"+(STATE.name?" for "+STATE.name:"")+".");
+    }catch(e){ toast("That file is not a progress file from this page."); }
+  };
+  r.readAsText(f); ev.target.value="";
+}
+function resetProgress(){
+  if(!confirmBox("This will clear every tick and score on this page. Are you sure?")) return;
+  STATE.name=""; STATE.done={}; STATE.scores={};
+  $("whoName").value=""; $("importLog").innerHTML="";
+  remember(); renderLists(); toast("Progress cleared.");
+}
+/* a confirm that still works where native dialogs are blocked */
+function confirmBox(msg){
+  try{ const r=window.confirm(msg); return r===true; }catch(e){ return false; }
+}
+
+/* ---------- course certificate ---------- */
+function renderCert(){
+  const all=LISTS.every(L=>listDone(L.n));
+  if(!all){
+    const left=12-doneCount();
+    $("certHolder").innerHTML='<div class="warn" style="margin-top:22px"><b>Course certificate:</b> '+
+      'finish all twelve activities to unlock it. '+left+' to go.</div>';
+    return;
+  }
+  const rows=LISTS.map(L=>{
+    const q=STATE.scores[key(L.n,"q")], r=STATE.scores[key(L.n,"r")];
+    return '<tr><td style="text-align:left">List '+L.n+' — '+L.theme+'</td>'+
+      '<td>'+(q!=null?q+"%":"✓")+'</td><td>'+(r!=null?r+"%":"✓")+'</td></tr>';
+  }).join("");
+  $("certHolder").innerHTML='<div class="cert"><div style="font-size:3rem">🏆</div>'+
+    '<div style="letter-spacing:2px;color:var(--violet);font-weight:700;font-size:13.5px">Higher Colleges of Technology · Abu Dhabi</div>'+
+    '<h2>Certificate of Completion</h2><p style="margin:0;color:var(--muted)">This certifies that</p>'+
+    '<div class="nm">'+esc(STATE.name||"Student")+'</div>'+
+    '<p style="max-width:52ch;margin:8px auto">has completed all six <b>B1+ vocabulary lists</b> '+
+    '— 240 words, six vocabulary quizzes and six IELTS-style reading tests — for General Studies, English Communications.</p>'+
+    '<table><tr><th style="text-align:left;padding:4px 14px">List</th><th style="padding:4px 14px">Quiz</th><th style="padding:4px 14px">Reading</th></tr>'+rows+'</table>'+
+    '<p style="color:var(--muted);font-size:15px">'+new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})+'</p>'+
+    '<p style="font-style:italic;margin-top:16px">Designed by: Nazila Motahari</p>'+
+    '<button class="btn noprint" onclick="window.print()" style="margin-top:8px">Print / save the certificate</button></div>';
+}
+
+/* ---------- deployment check ----------
+   The twelve app files must sit in the same folder as this page.
+   This tries to fetch each one and reports what is missing. */
+/* ---------- start ---------- */
+const MEM_OK=(function(){ try{ localStorage.setItem("b1plus-test","1"); localStorage.removeItem("b1plus-test"); return true; }catch(e){ return false; } })();
+recall();
+if(STATE.name) $("whoName").value=STATE.name;
+renderLists(); renderWords();
+</script>
+</body>
+</html>
